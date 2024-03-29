@@ -1,0 +1,29 @@
+Python decorator
+
+def star(func):
+    def inner(*args, **kwargs):
+        print('*' * 15)
+        func(*args, **kwargs)
+        print('*'*15)
+        print('[!] Now your code is decorated and is more beautiful!')
+        print('[!] This is how decorated work!')
+    return inner
+
+def percent(func):
+    def inner(*args, **kwargs):
+        print('%' * 15)
+        func(*args, **kwargs)
+        print('%' * 15)
+    return inner
+
+
+@star 
+@percent   
+def printer(msg):
+    print('This is a message from {}'.format(msg))
+
+printer("Man")
+
+
+
+
