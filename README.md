@@ -10,7 +10,6 @@ This project aims to grow continuously and serve as a living collection of Pytho
 > *“KungFu is not in style or form — it’s in patience, practice, and persistence. So is Python.”*
 
 ---
-
 ## 🔧 Project Structure
 
 PythonFu is divided into sub-projects, each focused on a different Python ecosystem or learning path:
