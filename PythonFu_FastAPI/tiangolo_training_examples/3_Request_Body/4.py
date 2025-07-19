@@ -21,17 +21,29 @@ class Item(BaseModel):
 # let's create fastapi instance
 app = FastAPI()
 
-'''
-FastAPI will recognize that the function parameters that
-match path parameters should be taken from the path,
-and that function parameters that are declared to be
-Pydantic models should be taken from the request body.
-'''
+@app.put("/items/{item_id}")
+async def update_item(
+    item_id: int,           # read item_id from the path
+    item: Item,             # read item from the request body
+    q: str | None = None    # read q from the query parameters (optional, default is None)
+    ):
 
-@app.post("/items/{user_id}")
-async def update_item(user_id: int, item: Item):
-    # user_items = {"user id": user_id}
-    return {"user_id": user_id, **item.dict()}
+    '''
+    FastAPI will recognize that the function parameters that
+    match path parameters should be taken from the path,
+    and that function parameters that are declared to be
+    Pydantic models should be taken from the request body.
+    '''
+
+    item_details = {"item_id": item_id, **item.dict()} # **item.dict() usage
+    if q: 
+        # if q is not None, add it to the item_details
+        # if q is None, it will not be added to the item_details
+        # this is a way to handle query parameters 
+        item_details.update({"q": q})
+
+    return item_details
+
 
 '''
 **item.dict() usage:
