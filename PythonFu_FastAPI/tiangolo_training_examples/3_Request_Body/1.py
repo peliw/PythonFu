@@ -29,14 +29,13 @@ For example, this model above declares a JSON "object" (or Python dict) like:
         "description": "An optional description",
         "price": 45.2,
         "tax": 3.5
-    }
+    }s
 
 as description and tax are optional (with a default value of None),
 this JSON "object" would also be valid:
-
     {
-    "name": "Foo",
-    "price": 45.2
+        "name": "Foo",
+        "price": 45.2
     }
 '''
 
