@@ -10,7 +10,7 @@ If you don't want to add a specific value but just make it optional, set the def
 But when you want to make a query parameter required, you can just not declare any default value:
 '''
 
-@app.get("items/{item_id}/")
+@app.get("/items/{item_id}/")
 async def read_item(item_id: int, q: str):
     """
     This function reads an item by its ID and a query parameter.
