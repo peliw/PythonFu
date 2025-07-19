@@ -20,8 +20,11 @@ async def read_user_item(
     # first we create a dictionary to hold the item information
     item = {"item id": item_id, "user_id": user_id}
 
-    # if q is not None (means if its presented in the path), it will be added to the item dictionary.
-    # in second case, if short is True, it will add a message to the item dictionary.
+    '''
+    if q is not None (means if its presented in the path), it will be added to the item dictionary.
+    in second case, if short is True, it will add a message to the item dictionary.
+    '''
+    
     if q:
         item.update({"query": q})
     if short:
