@@ -51,3 +51,17 @@ The ** operator is dictionary unpacking.
 It takes the key-value pairs from item.dict()
 and merges them into the outer dictionary.
 '''
+
+# following is a sample request you can use it. it uses curl and port proper data to the endpoint
+'''
+curl -X 'POST' \
+  'http://127.0.0.1:8000/items/22' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "name": "string",
+  "description": "string",
+  "price": 0,
+  "tax": 0
+}'
+'''
