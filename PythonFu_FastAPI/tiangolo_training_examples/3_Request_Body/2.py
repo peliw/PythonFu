@@ -38,7 +38,6 @@ async def create_item(item: Item):
     return item_dict
 
 
-
 # following is a sample request you can use it. it uses curl and port proper data to the endpoint
 '''
 curl -X 'POST' \
