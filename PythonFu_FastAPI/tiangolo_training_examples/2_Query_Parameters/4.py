@@ -31,7 +31,7 @@ async def read_user_item(
     if q:
         item.update({"query:" : q})
     if short:
-        item.update("message:" : "This is a short message")
+        item.update({"message:" : "This is a short message"})
 
     # finally, we return the item dictionary
     return item

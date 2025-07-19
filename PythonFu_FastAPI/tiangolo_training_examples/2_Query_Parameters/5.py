@@ -11,10 +11,10 @@ But when you want to make a query parameter required, you can just not declare a
 '''
 
 @app.get("items/{item_id}/")
-async def read_item(item_id: int, required_q: str):
+async def read_item(item_id: int, q: str):
     """
     This function reads an item by its ID and a query parameter.
     The query parameter 'q' is required: required_q.
     """
-    item = {"item_id": item_id, "required query:": required_q}
+    item = {"item id": item_id, "required query:": q}
     return item

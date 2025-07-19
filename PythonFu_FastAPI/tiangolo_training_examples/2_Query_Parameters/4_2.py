@@ -1,4 +1,4 @@
-from fastapi import FastApi
+from fastapi import FastAPI
 
 # by importing typing we want to use Union for type hinting
 from typing import Union
