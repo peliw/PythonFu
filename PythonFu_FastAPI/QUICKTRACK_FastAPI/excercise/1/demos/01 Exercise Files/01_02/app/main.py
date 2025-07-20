@@ -15,8 +15,6 @@ async def health_check():
     }
 
 
-
-
 # # for development environment only
 if __name__ == "__main__":
     import uvicorn
